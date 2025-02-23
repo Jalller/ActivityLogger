@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+package "Activity Logger System" {
+  [ActivityService] --> [WeatherService]
+  [ActivityService] --> [CityService]
+  [ActivityService] --> [ActivityDAO]
+  [WeatherService] --> [WeatherAPI]
+  [CityService] --> [CityAPI]
+}
+@enduml
+
+//A Component Diagram is used to show how the system is structured
+in terms of its components and their relationships.
+
+//package: Defines a logical grouping of components.
+-->: Represents communication or dependencies between components.

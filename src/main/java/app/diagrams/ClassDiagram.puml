@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ActivityDTO {
+  - LocalDate exerciseDate
+  - Activity exerciseType
+  - LocalTime timeOfDay
+  - double duration
+  - double distance
+  - String comment
+  + CityInfoDTO cityInfo
+  + WeatherInfoDTO weatherInfo
+}
+
+class CityInfoDTO {
+  - String name
+  - double latitude
+  - double longitude
+}
+
+class WeatherInfoDTO {
+  - double temperature
+  - String skyText
+  - String windText
+}
+
+ActivityDTO --> CityInfoDTO
+ActivityDTO --> WeatherInfoDTO
+@enduml
+
+//A Class Diagram shows the static structure of the system,
+including classes and their relationships.
+
+//class: Defines a class with its attributes and methods.
+-->: Defines relationships between classes (like associations
+between ActivityDTO and CityInfoDTO).

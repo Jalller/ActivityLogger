@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+
+node "Server" {
+  component "ActivityService"
+  component "WeatherService"
+  component "CityService"
+  component "ActivityDAO"
+}
+
+'node "Database" {
+'  component "Database"
+'}
+@enduml
+
+//A Deployment Diagram shows how software components are deployed
+on hardware nodes.
+
+//node: Represents a physical hardware node.
+component: Represents software components deployed on the node.

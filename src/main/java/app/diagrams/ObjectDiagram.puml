@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+object activity1 {
+  exerciseDate = 2025-02-23
+  exerciseType = "Walking"
+  duration = 1.5
+  distance = 5
+}
+
+object weather1 {
+  temperature = 12
+  skyText = "Clear"
+}
+
+activity1 --> weather1
+@enduml
+
+//An Object Diagram shows instances of classes and the
+relationships between them at a specific moment in time.
+
+//object: Defines an instance of a class.
+-->: Defines relationships between objects.

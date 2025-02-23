@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor User
+participant "ActivityService" as AS
+participant "ExecutorService" as ES
+participant "WeatherService" as WS
+participant "CityService" as CS
+participant "WeatherAPI" as WAPI
+participant "CityAPI" as CAPI
+participant "ActivityDAO" as DAO
+participant "Database" as DB
+
+User -> AS : createActivity(city, exerciseType, duration, distance, comment)
+AS -> ES : submit weather and city requests
+ES -> WS : getWeatherInfo(city)
+ES -> CS : getCityInfo(city)
+WS -> WAPI : fetch weather data
+CS -> CAPI : fetch city data
+WAPI -> WS : return weather data
+CAPI -> CS : return city data
+AS -> DAO : saveActivity(activityDTO)
+DAO -> DB : persist activity data
+DAO -> AS : return success
+AS -> User : return activityDTO with city and weather data
+@enduml
+
+//A Sequence Diagram shows how objects interact in a particular
+sequence over time.
+
+//actor User: Defines the actor interacting with the system
+(in this case, the user).
+participant: Defines the different system components (like services or APIs).
+->: Represents the messages sent between participants in the sequence.

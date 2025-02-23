@@ -28,13 +28,11 @@ public class WeatherService {
             } else {
                 System.out.println("GET request failed. Status code: " + response.statusCode());
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public WeatherInfoDTO getCurrentData() {
-    }
+
 }

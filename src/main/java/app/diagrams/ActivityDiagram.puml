@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Log Exercise;
+:Fetch Weather Data;
+:Fetch City Data;
+:Save Activity;
+:Return Activity Info;
+stop
+@enduml
+
+//An Activity Diagram shows the flow of activities or actions in a process.
+
+//start and stop: Marks the beginning and end of the activity.
+:: Defines an action or activity.
+Arrows (->) represent the flow from one activity to the next.

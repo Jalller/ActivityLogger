@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+
+[*] --> Idle
+
+Idle --> Processing : Start Logging
+Processing --> Finished : Log Complete
+Finished --> Idle : Reset
+
+@enduml
+
+//A State Diagram is used to describe the states an
+object can be in and the transitions between those states.
+
+//[ * ] represents the initial state.
+-->: Shows transitions between states.

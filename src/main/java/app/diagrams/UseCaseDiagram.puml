@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor User
+actor Admin
+
+User --> (Log Exercise)
+User --> (View History)
+Admin --> (Add/Remove Users)
+Admin --> (View All Exercises)
+
+(Log Exercise) ..> (View History) : includes
+@enduml
+
+//A Use Case Diagram represents the functionality the system provides
+and who interacts with it.
+
+//actor User and actor Admin: Define the users interacting with the system.
+(Log Exercise), (View History): Represent use cases (functionalities the
+system provides).
+-->: Represents a user initiating a use case.
+..>: Represents one use case including another.
